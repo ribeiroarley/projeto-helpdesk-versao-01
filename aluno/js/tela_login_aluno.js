@@ -11,7 +11,7 @@ function showError(message) {
 }
 
 // Adiciona um ouvinte de evento ao formulário de login quando ele é enviado
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById("loginAlunoForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Impede o comportamento padrão do formulário (não recarrega a página)
 
     // Obtém os valores dos campos e o botão
