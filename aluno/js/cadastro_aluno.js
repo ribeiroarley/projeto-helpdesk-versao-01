@@ -1,6 +1,6 @@
 // Função para exibir mensagens no formulário (erro ou sucesso)
 function showMessage(message, type) {
-    const form = document.querySelector(".login-form");
+    const form = document.querySelector(".register-form"); // Corrigido de .login-form para .register-form
     let messageDiv = form.querySelector(`.${type}-message`);
     
     // Remove qualquer mensagem existente do mesmo tipo
