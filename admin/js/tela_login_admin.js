@@ -16,6 +16,12 @@ function showError(message) {
     errorDiv.style.display = "block";
 }
 
+// Adiciona um admin padrão (apenas para testes)
+if (!localStorage.getItem("admins")) {
+    const defaultAdmin = [{ nome: "Admin Padrão", email: "admin@edu.df.senac.br", senha: "123456" }];
+    localStorage.setItem("admins", JSON.stringify(defaultAdmin));
+}
+
 // Adiciona um evento de submit ao formulário de login do administrador
 document.getElementById("loginAdminForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Impede o comportamento padrão do formulário (recarregar a página)
