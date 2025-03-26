@@ -37,13 +37,13 @@ body {
 }
 
 /* Container principal da página */
-.login-page {
+.register-page {
     width: 100%;
     max-width: 400px; /* Largura máxima do container */
 }
 
 /* Container do formulário de cadastro */
-.login-container {
+.register-container {
     background: #ffffff;
     padding: 40px 30px;
     border-radius: 12px;
@@ -71,7 +71,7 @@ body {
 }
 
 /* Estilo do formulário */
-.login-form {
+.register-form {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Espaçamento entre os elementos do formulário */
@@ -174,7 +174,7 @@ body {
 }
 
 /* Estilo da mensagem de sucesso */
-.success-message {
+.message.success-message {
     background-color: #ddffdd; /* Verde claro */
     color: #2e7d32; /* Verde escuro */
     padding: 10px;
@@ -186,7 +186,7 @@ body {
 }
 
 /* Estilo da mensagem de erro */
-.error-message {
+.message.error-message {
     background-color: #ffdddd; /* Vermelho claro */
     color: #d8000c; /* Vermelho escuro */
     padding: 10px;
@@ -202,7 +202,7 @@ body {
     .site-title {
         font-size: 1.8rem;
     }
-    .login-container {
+    .register-container {
         padding: 30px 20px;
     }
 }
@@ -217,7 +217,7 @@ body {
         margin: 20px 0 15px;
         text-transform: none;
     }
-    .login-container {
+    .register-container {
         padding: 20px 15px;
     }
     .header img {
