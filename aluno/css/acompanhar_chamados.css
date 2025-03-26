@@ -1,18 +1,37 @@
+/* Define variáveis globais para cores consistentes */
+:root {
+    --primary-color: #ff6200; /* Cor principal (laranja) */
+    --primary-dark: #e65a00; /* Tom mais escuro para hover */
+    --secondary-color: #0078d4; /* Cor secundária (azul) */
+    --background-light: #f9fbfc; /* Fundo claro */
+    --background-dark: #f0f4f8; /* Fundo secundário */
+    --text-color: #333; /* Cor do texto */
+    --text-muted: #666; /* Texto secundário */
+}
+
+/* Reset básico para consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
 /* Estilo geral do corpo */
 body {
-    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
-    background: #f9fbfc; /* Cor de fundo clara */
-    color: #333; /* Cor do texto */
-    min-height: 100vh; /* Garante altura mínima da tela */
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-light);
+    color: var(--text-color);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Estilo do cabeçalho */
 .header {
-    background: #ff6200; /* Muda para laranja */
+    background: var(--primary-color);
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Conteúdo do cabeçalho */
@@ -34,23 +53,29 @@ body {
 /* Título do cabeçalho */
 .header h1 {
     font-size: 1.8rem;
-    color: #ffffff; /* Mantém o texto branco para contraste com o laranja */
+    color: #ffffff;
 }
 
 /* Botão de voltar */
 .back-button {
     background: #ffffff;
-    color: #ff6200; /* Muda para laranja */
-    border: 2px solid #ff6200;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     padding: 8px 16px;
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .back-button:hover {
-    background: #e65a00; /* Tom mais escuro de laranja ao passar o mouse */
+    background: var(--primary-dark);
     color: #ffffff;
+}
+
+.back-button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 /* Seção principal */
@@ -66,44 +91,75 @@ body {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 /* Título da seção */
 .chamados-section h2 {
     font-size: 1.6rem;
-    color: #ff6200; /* Muda para laranja */
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
 /* Lista de chamados */
 .chamados-list {
     list-style: none;
-    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Itens da lista de chamados */
 .chamados-list li {
+    width: 100%;
+    max-width: 600px;
     padding: 15px;
     margin: 10px 0;
-    background: #f0f4f8;
+    background: var(--background-dark);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* Texto dentro dos itens da lista */
 .chamados-list li span {
     font-size: 14px;
+    color: var(--text-muted);
 }
 
 /* Rodapé */
 .footer {
-    background: #f0f4f8;
+    background: var(--background-dark);
     padding: 20px;
     text-align: center;
     font-size: 14px;
-    color: #666;
+    color: var(--text-muted);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header h1 {
+        margin: 10px 0;
+        font-size: 1.6rem;
+    }
+    .chamados-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    .chamados-section h2 {
+        font-size: 1.4rem;
+    }
 }
