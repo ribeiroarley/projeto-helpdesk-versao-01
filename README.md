@@ -2,7 +2,7 @@
 Sistema de Gerenciamento de Chamados Técnicos
 
 Acesse o Projeto 🌐  
-Você pode conferir o sistema através deste link: [Help Desk - Comunidade Senac](https://github.com/)  
+Você pode conferir o sistema através deste link: [Help Desk - Comunidade Senac](https://ribeiroarley.github.io/projeto-helpdesk-versao-01/boas-vindas/html/index.html)  
 
 Desenvolvido por 💼  
 Antonio Roni  
