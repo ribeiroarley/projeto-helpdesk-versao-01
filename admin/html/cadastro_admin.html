@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Cadastrar Novo Administrador | Help Desk Senac</title>
+    <!-- Importa o arquivo CSS específico para estilizar esta página -->
+    <link rel="stylesheet" href="../css/cadastro_admin.css">
+    <!-- Importa a fonte Roboto do Google Fonts para consistência tipográfica -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Aviso exibido se o JavaScript estiver desativado no navegador -->
+    <noscript>
+        <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
+    </noscript>
+    <!-- Seção principal da página -->
+    <main class="register-page">
+        <!-- Título principal do site -->
+        <h1 class="site-title">Help Desk - Comunidade Senac</h1>
+        <!-- Container do formulário de cadastro -->
+        <div class="register-container">
+            <!-- Cabeçalho do container -->
+            <header class="header">
+                <!-- Logo do Senac -->
+                <img src="../img/logoportal.png" alt="Logo do Portal Senac para o sistema Help Desk" width="200">
+                <!-- Subtítulo da página -->
+                <h2 class="admin-subtitle">Cadastrar Novo Administrador</h2>
+            </header>
+            <!-- Formulário de cadastro -->
+            <form id="cadastroAdminForm" class="register-form" method="POST">
+                <!-- Campo para o nome do administrador -->
+                <div class="input-group">
+                    <label for="admin-nome">Nome Completo</label>
+                    <input type="text" id="admin-nome" name="nome" placeholder="Digite o nome completo" required aria-label="Digite o nome completo">
+                </div>
+                <!-- Campo para o e-mail do administrador -->
+                <div class="input-group">
+                    <label for="admin-email">E-mail Senac</label>
+                    <input type="email" id="admin-email" name="email" placeholder="Digite o e-mail Senac" required aria-label="Digite o e-mail Senac">
+                </div>
+                <!-- Campo para a senha do administrador -->
+                <div class="input-group">
+                    <label for="admin-senha">Senha</label>
+                    <input type="password" id="admin-senha" name="senha" placeholder="Crie uma senha" required aria-label="Crie uma senha">
+                </div>
+                <!-- Botão para enviar o formulário -->
+                <button type="submit" class="register-button" aria-label="Cadastrar">Cadastrar</button>
+            </form>
+            <!-- Área para exibir mensagens de sucesso ou erro -->
+            <div id="admin-message" class="admin-message"></div>
+            <!-- Link para voltar ao painel -->
+            <div class="help-links">
+                <a href="painel_admin.html" class="back-to-panel">Voltar ao Painel</a>
+            </div>
+        </div>
+    </main>
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <p><strong>Help Desk – Comunidade Senac</strong>: Sistema de atendimento e gerenciamento de chamados técnicos para alunos e professores Senac. Turma 2023.07.303 - Técnico em Informática.</p>
+        <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
+    </footer>
+    <!-- Importa o arquivo JavaScript que controla a lógica da página -->
+    <script src="../js/cadastro_admin.js"></script>
+</body>
+</html>

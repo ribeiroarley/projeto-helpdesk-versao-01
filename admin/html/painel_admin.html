@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Painel Admin | Help Desk Senac</title>
+    <!-- Importa o arquivo CSS específico para estilizar esta página -->
+    <link rel="stylesheet" href="../css/painel_admin.css">
+    <!-- Importa a fonte Roboto do Google Fonts para consistência tipográfica -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Aviso exibido se o JavaScript estiver desativado no navegador -->
+    <noscript>
+        <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
+    </noscript>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <!-- Logo do Senac exibida no topo -->
+        <img src="../../assets/img/logoportal.png" alt="Logo do Portal Senac para o sistema Help Desk" width="200">
+        <!-- Título principal do painel administrativo -->
+        <h1 class="admin-title">Painel Administrador</h1>
+        <!-- Seção com informações do administrador logado -->
+        <div class="admin-info">
+            <!-- Exibe o nome do administrador logado -->
+            <span id="admin-nome">Bem-vindo(a), [Nome do Admin]</span>
+            <!-- Botão para sair do sistema -->
+            <button class="logout-button" onclick="logout()">Sair</button>
+        </div>
+    </header>
+    <!-- Conteúdo principal da página -->
+    <main class="main-content">
+        <!-- Botão para redirecionar para a página de cadastro de novo administrador -->
+        <div class="admin-actions">
+            <a href="cadastro_admin.html" class="register-button">Cadastrar novo administrador</a>
+        </div>
+        <!-- Container principal do painel administrativo -->
+        <div class="admin-container">
+            <!-- Título da seção de gerenciamento de chamados -->
+            <h2 class="section-title">Gerenciar Chamados</h2>
+            <!-- Área de filtros para os chamados -->
+            <div class="filters">
+                <!-- Filtro por status do chamado -->
+                <div class="filter-group">
+                    <label for="filter-status">Filtrar por Status:</label>
+                    <select id="filter-status" onchange="filtrarChamados()">
+                        <option value="todos">Todos</option>
+                        <option value="Aberto">Aberto</option>
+                        <option value="Em Andamento">Em Andamento</option>
+                        <option value="Concluído">Concluído</option>
+                    </select>
+                </div>
+                <!-- Filtro por tipo de serviço -->
+                <div class="filter-group">
+                    <label for="filter-service">Filtrar por Serviço:</label>
+                    <select id="filter-service" onchange="filtrarChamados()">
+                        <option value="todos">Todos</option>
+                        <option value="Manutenção de Notebook">Manutenção de Notebook</option>
+                        <option value="Manutenção de Computador">Manutenção de Computador</option>
+                        <option value="Serviços de Redes">Serviços de Redes</option>
+                        <option value="Serviços de Programação">Serviços de Programação</option>
+                    </select>
+                </div>
+                <!-- Filtro por ordem de data -->
+                <div class="filter-group">
+                    <label for="sort-date">Ordenar por Data:</label>
+                    <select id="sort-date" onchange="filtrarChamados()">
+                        <option value="desc">Mais Recente Primeiro</option>
+                        <option value="asc">Mais Antigo Primeiro</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Lista onde os chamados serão exibidos dinamicamente -->
+            <div id="lista-chamados" class="chamados-list">
+                <!-- Chamados serão inseridos aqui pelo JavaScript -->
+            </div>
+        </div>
+    </main>
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <p><strong>Help Desk – Comunidade Senac</strong>: Sistema de atendimento e gerenciamento de chamados técnicos para alunos e professores Senac. Turma 2023.07.303 - Técnico em Informática.</p>
+        <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
+    </footer>
+    <!-- Importa o arquivo JavaScript que controla a lógica da página -->
+    <script src="../js/painel_admin.js"></script>
+</body>
+</html>

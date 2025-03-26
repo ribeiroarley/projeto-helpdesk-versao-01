@@ -1,0 +1,197 @@
+/* Define variáveis globais para cores consistentes */
+:root {
+    --primary-color: #002b5c; /* Cor principal (azul escuro) para admin */
+    --primary-dark: #001f47; /* Tom mais escuro para hover */
+    --secondary-color: #0078d4; /* Cor secundária (azul claro) */
+}
+
+/* Reset básico para remover margens e paddings padrão dos elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo de tamanho */
+    outline: 0; /* Remove contorno padrão ao focar elementos */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif, Arial; /* Define a fonte padrão */
+    background: #e8eef4; /* Fundo cinza claro, mais escuro que o do aluno */
+    color: #333; /* Cor do texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante altura mínima da tela */
+    padding: 20px;
+}
+
+/* Estilo do título principal da página */
+.site-title {
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária (azul escuro) */
+    text-align: center; /* Centraliza o texto */
+    margin: 40px 0 20px; /* Espaçamento externo (topo, laterais, base) */
+    font-weight: bold; /* Define o texto como negrito */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+/* Container principal da página */
+.welcome-container {
+    background: #ffffff; /* Fundo branco */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    width: 100%; /* Largura total */
+    max-width: 500px; /* Largura máxima */
+    margin: 0 auto 40px; /* Centraliza horizontalmente e adiciona margem inferior */
+    border-left: 4px solid var(--primary-color); /* Borda lateral azul escura */
+}
+
+/* Estilo do cabeçalho dentro do container */
+.header {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Estilo da logo no cabeçalho */
+.header img {
+    max-width: 200px; /* Limita a largura máxima da logo */
+    width: 100%; /* Ajusta a largura proporcionalmente */
+}
+
+/* Estilo do subtítulo no cabeçalho */
+.welcome-subtitle {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária */
+    margin-top: 15px; /* Espaçamento superior */
+    font-weight: medium; /* Peso médio da fonte */
+}
+
+/* Estilo do conteúdo principal */
+.welcome-content {
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do título da seção de boas-vindas */
+.content-title {
+    font-size: 1.3rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo da descrição orientando o usuário */
+.content-description {
+    font-size: 14px; /* Tamanho da fonte */
+    color: var(--text-primary); /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    line-height: 1.5; /* Melhora a legibilidade */
+}
+
+/* Estilo do container dos botões de ação */
+.action-buttons {
+    display: flex; /* Usa flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo base para os botões */
+.button {
+    padding: 12px 30px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto branca */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, transform 0.1s; /* Transição suave para cor e animação */
+}
+
+/* Estilo específico para o botão de aluno */
+.aluno-button {
+    background-color: #ff6200; /* Cor laranja para o botão de aluno */
+}
+
+/* Efeito hover no botão de aluno */
+.aluno-button:hover {
+    background-color: #cc4e00; /* Tom mais escuro do laranja ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+/* Estilo específico para o botão de administrador */
+.admin-button {
+    background-color: #002b5c; /* Cor azul escuro para o botão de administrador */
+}
+
+/* Efeito hover no botão de administrador */
+.admin-button:hover {
+    background-color: #001f47; /* Tom mais escuro do azul escuro ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+/* Efeito focus nos botões */
+.button:focus {
+    outline: 2px solid var(--primary-dark); /* Contorno ao focar */
+    outline-offset: 2px; /* Distância do contorno */
+}
+
+/* Efeito active nos botões */
+.button:active {
+    transform: translateY(0); /* Volta à posição original ao clicar */
+}
+
+/* Estilo do rodapé */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 20px;
+    max-width: 600px;
+}
+
+/* Estilo para o texto em negrito no rodapé */
+.footer strong {
+    color: #666;
+}
+
+/* Responsividade para telas menores (768px ou menos) */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2rem; /* Reduz o tamanho da fonte */
+    }
+
+    .welcome-container {
+        padding: 30px; /* Reduz o espaçamento interno */
+        max-width: 90%; /* Ajusta a largura máxima */
+    }
+
+    .action-buttons {
+        flex-direction: column; /* Organiza os botões em coluna */
+        gap: 15px; /* Espaçamento ajustado */
+    }
+
+    .button {
+        padding: 12px 20px; /* Reduz o espaçamento interno */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Responsividade para telas pequenas (480px ou menos) */
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.8rem; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .welcome-subtitle {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+
+    .content-title {
+        font-size: 1.1rem; /* Reduz o tamanho da fonte */
+    }
+
+    .welcome-container {
+        padding: 20px; /* Reduz ainda mais o espaçamento interno */
+    }
+}

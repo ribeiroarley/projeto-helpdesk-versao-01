@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação do documento -->
+    <meta charset="UTF-8">
+    <!-- Define a escala inicial para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Acompanhar Chamados - TI Help Desk Senac</title>
+    <!-- Importa o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/acompanhar_chamados.css">
+    <!-- Importa a fonte Roboto do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo do Senac -->
+            <img src="../../assets/img/logoportal.png" alt="Logo Senac" class="logo" width="150">
+            <!-- Título da página -->
+            <h1>Acompanhar Chamados - Help Desk</h1>
+            <!-- Botão para voltar ao painel -->
+            <button class="back-button" onclick="window.location.href='painel_servicos.html'">Voltar</button>
+        </div>
+    </header>
+
+    <!-- Seção principal -->
+    <main class="main-content">
+        <section class="chamados-section">
+            <!-- Título da seção -->
+            <h2>Seus Chamados</h2>
+            <!-- Lista onde os chamados serão exibidos -->
+            <ul id="chamadosList" class="chamados-list"></ul>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p><strong>Help Desk – Comunidade Senac</strong>: Sistema de atendimento e gerenciamento de chamados técnicos para alunos e professores Senac. Turma 2023.07.303 - Técnico em Informática.</p>
+        <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
+    </footer>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="../js/acompanhar_chamados.js"></script>
+</body>
+</html>

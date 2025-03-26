@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Login - Aluno | Help Desk Senac</title>
+    <!-- Importa o arquivo CSS específico para estilizar esta página -->
+    <link rel="stylesheet" href="../css/tela_login_aluno.css">
+    <!-- Importa a fonte Roboto do Google Fonts para consistência tipográfica -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Aviso exibido se o JavaScript estiver desativado no navegador -->
+    <noscript>
+        <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
+    </noscript>
+    <!-- Seção principal da página -->
+    <main class="login-page">
+        <!-- Título principal do sistema -->
+        <h1 class="site-title">Help Desk - Comunidade Senac</h1>
+        <!-- Container central com o formulário de login -->
+        <div class="login-container">
+            <!-- Cabeçalho do container -->
+            <header class="header">
+                <!-- Logo do Senac exibida no topo -->
+                <img src="../../assets/img/logoportal.png" alt="Logo do Portal Senac para o sistema Help Desk" width="200">
+            </header>
+            <!-- Formulário de login -->
+            <form id="loginAlunoForm" class="login-form" method="POST">
+                <!-- Campo de e-mail -->
+                <div class="input-group">
+                    <label for="email">E-mail Senac</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail Senac" required autocomplete="email" aria-label="Digite seu e-mail Senac">
+                </div>
+                <!-- Campo de senha -->
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required autocomplete="current-password" aria-label="Digite sua senha">
+                </div>
+                <!-- Botão de envio -->
+                <button type="submit" class="login-button" aria-label="Entrar">Entrar</button>
+            </form>
+            <!-- Links de ajuda -->
+            <div class="help-links">
+                <a href="recuperar_senha_aluno.html" class="forgot-password">Esqueceu sua senha? Obtenha ajuda</a>
+                <a href="cadastro_aluno.html" class="register-link">Não tem conta? Cadastre-se</a>
+            </div>
+        </div>
+    </main>
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <!-- Descrição do sistema e informações da turma -->
+        <p><strong>Help Desk – Comunidade Senac</strong>: Sistema de atendimento e gerenciamento de chamados técnicos para alunos e professores Senac. Turma 2023.07.303 - Técnico em Informática.</p>
+        <!-- Nomes dos desenvolvedores -->
+        <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
+    </footer>
+    <!-- Importa o arquivo JavaScript que controla a lógica da página -->
+    <script src="../js/tela_login_aluno.js"></script>
+</body>
+</html>

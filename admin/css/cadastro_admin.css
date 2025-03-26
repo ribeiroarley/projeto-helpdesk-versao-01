@@ -1,0 +1,233 @@
+/* Define variáveis globais para cores consistentes */
+:root {
+    --primary-color: #002b5c; /* Cor principal (azul escuro) para admin */
+    --primary-dark: #001f47; /* Tom mais escuro da cor principal para hover */
+    --secondary-color: #0078d4; /* Cor secundária (azul claro) */
+}
+
+/* Reset básico para remover margens e paddings padrão dos elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo de tamanho */
+    outline: 0; /* Remove contorno padrão ao focar elementos */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif, Arial; /* Define a fonte padrão, com fallback */
+    background: #e8eef4; /* Define o fundo cinza claro */
+    color: #333; /* Define a cor do texto padrão */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo do título principal do site */
+.site-title {
+    font-size: 2.2rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária (azul escuro) */
+    text-align: center; /* Centraliza o texto */
+    margin: 40px 0 20px; /* Espaçamento externo */
+    font-weight: bold; /* Texto em negrito */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+/* Container principal da página */
+.register-page {
+    width: 100%; /* Largura total */
+    max-width: 400px; /* Largura máxima */
+}
+
+/* Container do formulário de cadastro */
+.register-container {
+    background: #ffffff; /* Fundo branco */
+    padding: 40px 30px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    width: 100%; /* Largura total */
+    text-align: center; /* Centraliza o texto */
+    border-left: 4px solid var(--primary-color); /* Borda lateral azul escura */
+}
+
+/* Estilo da logo no cabeçalho */
+.header img {
+    max-width: 200px; /* Limita a largura máxima da logo */
+    width: 100%; /* Ajusta a largura proporcionalmente */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estilo do subtítulo */
+.admin-subtitle {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária (azul escuro) */
+    font-weight: 500; /* Peso da fonte médio */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+/* Estilo do formulário de cadastro */
+.register-form {
+    display: flex; /* Usa flexbox para organizar os campos */
+    flex-direction: column; /* Organiza os campos em coluna */
+    gap: 20px; /* Espaçamento entre os elementos do formulário */
+}
+
+/* Estilo dos grupos de input (label + input) */
+.input-group {
+    display: flex; /* Usa flexbox para organizar label e input */
+    flex-direction: column; /* Organiza em coluna */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo das labels */
+.input-group label {
+    margin-bottom: 8px; /* Espaçamento inferior */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #555; /* Cor cinza escura */
+}
+
+/* Estilo dos campos de input */
+.input-group input {
+    padding: 12px 14px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para borda e sombra */
+}
+
+/* Efeito ao focar no input */
+.input-group input:focus {
+    border-color: var(--primary-color); /* Borda azul escura ao focar */
+    box-shadow: 0 0 5px rgba(0, 43, 92, 0.3); /* Sombra sutil ao focar */
+}
+
+/* Estilo do botão de cadastro */
+.register-button {
+    background-color: var(--primary-color); /* Usa a cor primária */
+    color: #ffffff; /* Cor do texto branca */
+    padding: 14px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Efeito hover no botão de cadastro */
+.register-button:hover {
+    background-color: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+}
+
+/* Efeito focus no botão de cadastro */
+.register-button:focus {
+    outline: 2px solid var(--primary-dark); /* Contorno ao focar */
+    outline-offset: 2px; /* Distância do contorno */
+}
+
+/* Estilo do botão de cadastro quando desabilitado */
+.register-button:disabled {
+    background-color: #cccccc; /* Cinza para indicar desabilitado */
+    cursor: not-allowed; /* Cursor indicando que não é clicável */
+}
+
+/* Estilo da mensagem de feedback */
+.admin-message {
+    margin-top: 15px; /* Espaçamento superior */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilo para mensagem de sucesso */
+.admin-message.success {
+    color: #2e7d32; /* Verde escuro para o texto */
+    background-color: #ddffdd; /* Fundo verde claro */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #2e7d32; /* Borda verde escura */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Estilo para mensagem de erro */
+.admin-message.error {
+    color: #d8000c; /* Vermelho escuro para o texto */
+    background-color: #ffdddd; /* Fundo vermelho claro */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #d8000c; /* Borda vermelha escura */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Estilo dos links de ajuda */
+.help-links {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo do link de voltar ao painel */
+.help-links a {
+    color: var(--primary-color); /* Usa a cor primária */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Efeito hover no link */
+.help-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Efeito focus no link */
+.help-links a:focus {
+    outline: 2px solid var(--primary-color); /* Contorno ao focar */
+    outline-offset: 2px; /* Distância do contorno */
+}
+
+/* Estilo do rodapé */
+.footer {
+    margin-top: 40px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #666; /* Cor cinza */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 600px; /* Largura máxima */
+}
+
+/* Estilo para o texto em negrito no rodapé */
+.footer strong {
+    color: #666; /* Cor cinza para consistência */
+}
+
+/* Responsividade para telas menores (768px ou menos) */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte */
+    }
+    .register-container {
+        padding: 30px 20px; /* Reduz o espaçamento interno */
+    }
+}
+
+/* Responsividade para telas pequenas (480px ou menos) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduz o padding em telas pequenas */
+    }
+    .site-title {
+        font-size: 1.6rem; /* Reduz o tamanho da fonte */
+        margin: 20px 0 15px; /* Ajusta o espaçamento */
+        text-transform: none; /* Remove transformação em maiúsculas */
+    }
+    .register-container {
+        padding: 20px 15px; /* Reduz o espaçamento interno */
+    }
+    .header img {
+        max-width: 150px; /* Reduz o tamanho da logo */
+    }
+    .admin-subtitle {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+    .register-button {
+        padding: 12px; /* Reduz o espaçamento interno */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+}

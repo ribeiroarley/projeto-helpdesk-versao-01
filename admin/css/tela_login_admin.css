@@ -1,0 +1,249 @@
+/* Define variáveis globais para cores consistentes */
+:root {
+    --primary-color: #002b5c; /* Cor principal (azul escuro) para admin */
+    --primary-dark: #001f47; /* Tom mais escuro para hover */
+    --secondary-color: #0078d4; /* Cor secundária (azul claro) */
+}
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif, Arial; /* Define a fonte padrão */
+    background: #e8eef4; /* Fundo cinza claro, mais escuro que o do aluno */
+    color: #333; /* Cor do texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante altura mínima da tela */
+    padding: 20px;
+}
+
+/* Estilo do título principal do site */
+.site-title {
+    font-size: 2.2rem;
+    color: var(--primary-color); /* Usa a cor primária */
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Container principal da página */
+.login-page {
+    width: 100%;
+    max-width: 400px; /* Largura máxima do container */
+}
+
+/* Container do formulário de login */
+.login-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    width: 100%;
+    text-align: center;
+    border-left: 4px solid var(--primary-color); /* Borda lateral com cor primária */
+}
+
+/* Estilo da logo no cabeçalho */
+.header img {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Estilo do subtítulo */
+.admin-subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-color); /* Usa a cor primária */
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo do formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os elementos do formulário */
+}
+
+/* Estilo dos grupos de input (label + input) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Estilo das labels */
+.input-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilo dos campos de input */
+.input-group input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao focar no input */
+.input-group input:focus {
+    border-color: var(--primary-color); /* Borda com cor primária ao focar */
+    box-shadow: 0 0 5px rgba(0, 43, 92, 0.3);
+}
+
+/* Estilo do botão de login */
+.login-button {
+    background-color: var(--primary-color); /* Usa a cor primária */
+    color: #ffffff;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover no botão */
+.login-button:hover {
+    background-color: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+}
+
+/* Efeito focus no botão */
+.login-button:focus {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+
+/* Estilo do botão quando desabilitado */
+.login-button:disabled {
+    background-color: #cccccc; /* Cinza para indicar desabilitado */
+    cursor: not-allowed;
+}
+
+/* Estilo dos links de ajuda */
+.help-links {
+    margin-top: 20px;
+}
+
+/* Estilo do link de recuperação de senha */
+.forgot-password {
+    color: var(--primary-color); /* Usa a cor primária */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Efeito hover no link de recuperação */
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Efeito focus no link de recuperação */
+.forgot-password:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Estilo do link de cadastro */
+.register-link {
+    color: var(--primary-color); /* Usa a cor primária */
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px; /* Espaçamento em relação ao link anterior */
+    display: block; /* Garante que o link fique em uma nova linha */
+}
+
+/* Efeito hover no link de cadastro */
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Efeito focus no link de cadastro */
+.register-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Estilo do aviso de acesso restrito */
+.admin-access-warning {
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Estilo do rodapé */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 20px;
+    max-width: 600px;
+}
+
+/* Estilo para o texto em negrito no rodapé */
+.footer strong {
+    color: #666;
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+    background-color: #ffdddd; /* Vermelho claro */
+    color: #d8000c; /* Vermelho escuro */
+    padding: 10px;
+    border: 1px solid #d8000c;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: none; /* Inicialmente escondida */
+}
+
+/* Responsividade para telas menores (768px ou menos) */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+    .login-container {
+        padding: 30px 20px;
+    }
+}
+
+/* Responsividade para telas pequenas (480px ou menos) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduz o padding em telas pequenas */
+    }
+    .site-title {
+        font-size: 1.6rem;
+        margin: 20px 0 15px;
+        text-transform: none;
+    }
+    .login-container {
+        padding: 20px 15px;
+    }
+    .header img {
+        max-width: 150px;
+    }
+    .admin-subtitle {
+        font-size: 1rem;
+    }
+    .login-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

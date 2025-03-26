@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação do documento -->
+    <meta charset="UTF-8">
+    <!-- Define a escala inicial para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Formulário de Chamado - TI Help Desk Senac</title>
+    <!-- Importa o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/formulario_chamado.css">
+    <!-- Importa a fonte Roboto do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mensagem para usuários com JavaScript desativado -->
+    <noscript>
+        <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
+    </noscript>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo do Senac -->
+            <img src="../../assets/img/logoportal.png" alt="Logo Senac" class="logo" width="150">
+            <!-- Título do formulário com o nome do serviço -->
+            <h1>Formulário de Chamado - <span id="serviceName">Carregando...</span></h1>
+            <!-- Botão para voltar ao painel -->
+            <button class="back-button" onclick="goBack()">Voltar</button>
+        </div>
+    </header>
+
+    <!-- Seção principal -->
+    <main class="main-content">
+        <section class="form-section">
+            <!-- Título da seção -->
+            <h2>Abra seu Chamado</h2>
+            <!-- Formulário para abertura de chamado -->
+            <form id="chamadoForm" class="chamado-form">
+                <!-- Campo para o nome do aluno -->
+                <div class="input-group">
+                    <label for="userName">Nome do Aluno</label>
+                    <input type="text" id="userName" name="userName" placeholder="Digite seu nome" required aria-label="Digite seu nome">
+                </div>
+                <!-- Campo para o número de WhatsApp -->
+                <div class="input-group">
+                    <label for="whatsapp">Número de WhatsApp (com DDD, ex.: 61987654321)</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="Digite seu número de WhatsApp" pattern="[0-9]{11}" title="Digite um número de WhatsApp válido com DDD (ex.: 61987654321)" required aria-label="Digite seu número de WhatsApp">
+                </div>
+                <!-- Campo para a descrição do problema -->
+                <div class="input-group">
+                    <label for="descricao">Descrição do Problema</label>
+                    <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva o problema" required aria-label="Descreva o problema"></textarea>
+                </div>
+                <!-- Campo para selecionar a prioridade -->
+                <div class="input-group">
+                    <label for="prioridade">Prioridade</label>
+                    <select id="prioridade" name="prioridade" required aria-label="Selecione a prioridade">
+                        <option value="" disabled selected>Selecione a prioridade</option>
+                        <option value="baixa">Baixa</option>
+                        <option value="media">Média</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+                <!-- Botão de envio do formulário -->
+                <button type="submit" class="submit-button">Enviar Chamado</button>
+            </form>
+            <!-- Mensagem de resposta após o envio -->
+            <p id="responseMessage" class="response-message"></p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p><strong>Help Desk – Comunidade Senac</strong>: Sistema de atendimento e gerenciamento de chamados técnicos para alunos e professores Senac. Turma 2023.07.303 - Técnico em Informática.</p>
+        <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
+    </footer>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="../js/formulario_chamado.js"></script>
+</body>
+</html>

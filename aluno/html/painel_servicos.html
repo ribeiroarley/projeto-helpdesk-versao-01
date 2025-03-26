@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação do documento -->
+    <meta charset="UTF-8">
+    <!-- Define a escala inicial para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Painel de Serviços - TI Help Desk Senac</title>
+    <!-- Importa o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/painel_servicos.css">
+    <!-- Importa a fonte Roboto do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mensagem para usuários com JavaScript desativado -->
+    <noscript>
+        <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
+    </noscript>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo do Senac -->
+            <img src="../../assets/img/logoportal.png" alt="Logo Senac" class="logo" width="150">
+            <!-- Título do painel -->
+            <h1>Painel de Serviços - Help Desk</h1>
+            <!-- Botão de logout -->
+            <button class="logout-button" onclick="logout()">Sair</button>
+        </div>
+    </header>
+
+    <!-- Seção principal -->
+    <main class="main-content">
+        <section class="services">
+            <!-- Título da seção -->
+            <h2>Escolha um serviço:</h2>
+            <!-- Mensagem de boas-vindas -->
+            <p class="welcome-message">Bem-vindo(a), <span id="userName">aluno</span>! Selecione o serviço que você precisa abaixo.</p>
+            <!-- Lista de serviços -->
+            <ul class="services-list">
+                <li><button class="service-button" onclick="selecionarServico('Manutenção de Notebook')">Manutenção de Notebook</button></li>
+                <li><button class="service-button" onclick="selecionarServico('Manutenção de Computador')">Manutenção de Computador</button></li>
+                <li><button class="service-button" onclick="selecionarServico('Serviços de Redes')">Serviços de Redes</button></li>
+                <li><button class="service-button" onclick="selecionarServico('Serviços de Programação')">Serviços de Programação</button></li>
+                <li><a href="acompanhar_chamados.html" class="service-button">Acompanhar Meus Chamados</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p><strong>Help Desk – Comunidade Senac</strong>: Sistema de atendimento e gerenciamento de chamados técnicos para alunos e professores Senac. Turma 2023.07.303 - Técnico em Informática.</p>
+        <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
+    </footer>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="../js/painel_servicos.js"></script>
+</body>
+</html>

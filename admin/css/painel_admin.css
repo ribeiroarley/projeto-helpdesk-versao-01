@@ -1,0 +1,361 @@
+/* Define variáveis globais para cores consistentes */
+:root {
+    --primary-color: #002b5c; /* Cor principal (azul escuro) para admin */
+    --primary-dark: #001f47; /* Tom mais escuro da cor principal para hover */
+    --secondary-color: #0078d4; /* Cor secundária (azul claro) */
+    --whatsapp-color: #25D366; /* Verde padrão do WhatsApp */
+    --whatsapp-dark: #1ebe57; /* Verde escuro do WhatsApp para hover */
+}
+
+/* Reset básico para remover margens e paddings padrão dos elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo de tamanho */
+    outline: 0; /* Remove contorno padrão ao focar elementos */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif, Arial; /* Define a fonte padrão, com fallback */
+    background: #e8eef4; /* Define o fundo cinza claro */
+    color: #333; /* Define a cor do texto padrão */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
+}
+
+/* Estilo do cabeçalho */
+.header {
+    background: #ffffff; /* Fundo branco */
+    padding: 20px 40px; /* Espaçamento interno */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    border-left: 4px solid var(--primary-color); /* Borda lateral azul escura */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil */
+}
+
+/* Estilo da logo no cabeçalho */
+.header img {
+    max-width: 200px; /* Limita a largura máxima da logo */
+    width: 100%; /* Ajusta a largura proporcionalmente */
+}
+
+/* Estilo do título do painel */
+.admin-title {
+    font-size: 1.8rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária (azul escuro) */
+    font-weight: bold; /* Define o texto como negrito */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+/* Estilo da seção de informações do administrador */
+.admin-info {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+/* Estilo do nome do administrador */
+#admin-nome {
+    font-size: 14px; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária (azul escuro) */
+}
+
+/* Estilo do botão de logout */
+.logout-button {
+    background-color: var(--primary-color); /* Usa a cor primária como fundo */
+    color: #ffffff; /* Cor do texto branca */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    border: none; /* Remove borda padrão */
+    border-radius: 6px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Efeito hover no botão de logout */
+.logout-button:hover {
+    background-color: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+}
+
+/* Efeito focus no botão de logout */
+.logout-button:focus {
+    outline: 2px solid var(--primary-dark); /* Contorno ao focar */
+    outline-offset: 2px; /* Distância do contorno */
+}
+
+/* Estilo da seção principal */
+.main-content {
+    flex: 1; /* Faz a seção principal crescer para preencher o espaço disponível */
+    padding: 40px 20px; /* Espaçamento interno */
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Estilo do container de ações administrativas */
+.admin-actions {
+    margin-bottom: 20px; /* Espaçamento inferior para separar do container de chamados */
+    width: 100%; /* Largura total */
+    max-width: 1200px; /* Mesma largura máxima do container de chamados */
+    text-align: left; /* Alinha o botão à esquerda */
+}
+
+/* Estilo do botão de cadastro de novo administrador */
+.register-button {
+    display: inline-block; /* Permite estilizar como botão */
+    background-color: var(--primary-color); /* Usa a cor primária */
+    color: #ffffff; /* Cor do texto branca */
+    padding: 12px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove borda padrão */
+    border-radius: 6px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado padrão do link */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    transition: background-color 0.3s, transform 0.1s; /* Transição suave para cor e leve animação */
+}
+
+/* Efeito hover no botão de cadastro */
+.register-button:hover {
+    background-color: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+/* Efeito focus no botão de cadastro */
+.register-button:focus {
+    outline: 2px solid var(--primary-dark); /* Contorno ao focar */
+    outline-offset: 2px; /* Distância do contorno */
+}
+
+/* Efeito active no botão de cadastro */
+.register-button:active {
+    transform: translateY(0); /* Volta à posição original ao clicar */
+}
+
+/* Container do painel administrativo */
+.admin-container {
+    background: #ffffff; /* Fundo branco */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    width: 100%; /* Largura total */
+    max-width: 1200px; /* Largura máxima */
+    border-left: 4px solid var(--primary-color); /* Borda lateral azul escura */
+}
+
+/* Estilo do título da seção */
+.section-title {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Usa a cor primária */
+    font-weight: bold; /* Texto em negrito */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+/* Estilo dos filtros */
+.filters {
+    display: flex; /* Usa flexbox para alinhar os filtros */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 20px; /* Espaçamento entre os filtros */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Estilo dos grupos de filtro */
+.filter-group {
+    display: flex; /* Usa flexbox para organizar label e select */
+    flex-direction: column; /* Organiza em coluna */
+    gap: 8px; /* Espaçamento entre label e select */
+}
+
+/* Estilo das labels dos filtros */
+.filter-group label {
+    font-size: 14px; /* Tamanho da fonte */
+    color: #555; /* Cor cinza escura */
+}
+
+/* Estilo dos selects dos filtros */
+.filter-group select {
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 6px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    font-size: 14px; /* Tamanho da fonte */
+    width: 200px; /* Largura fixa */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para borda e sombra */
+}
+
+/* Efeito focus nos selects */
+.filter-group select:focus {
+    border-color: var(--primary-color); /* Borda azul escura ao focar */
+    box-shadow: 0 0 5px rgba(0, 43, 92, 0.3); /* Sombra sutil ao focar */
+}
+
+/* Estilo da lista de chamados */
+.chamados-list {
+    display: flex; /* Usa flexbox para organizar os chamados */
+    flex-direction: column; /* Organiza em coluna */
+    gap: 15px; /* Espaçamento entre os chamados */
+}
+
+/* Estilo de cada chamado */
+.chamado-item {
+    background: #f9fbfc; /* Fundo cinza claro */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border-left: 4px solid var(--primary-color); /* Borda lateral azul escura */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra leve */
+}
+
+/* Estilo das informações do chamado */
+.chamado-info {
+    font-size: 14px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    line-height: 1.5; /* Melhora a legibilidade */
+}
+
+/* Estilo das ações do chamado */
+.chamado-actions {
+    display: flex; /* Usa flexbox para alinhar os elementos */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 10px; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Estilo do select de status no chamado */
+.chamado-actions select {
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 6px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para borda e sombra */
+}
+
+/* Efeito focus no select de status */
+.chamado-actions select:focus {
+    border-color: var(--primary-color); /* Borda azul escura ao focar */
+    box-shadow: 0 0 5px rgba(0, 43, 92, 0.3); /* Sombra sutil ao focar */
+}
+
+/* Estilo do campo de observação no chamado */
+.chamado-actions input[type="text"] {
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 6px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    font-size: 14px; /* Tamanho da fonte */
+    width: 200px; /* Largura fixa */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para borda e sombra */
+}
+
+/* Efeito focus no campo de observação */
+.chamado-actions input[type="text"]:focus {
+    border-color: var(--primary-color); /* Borda azul escura ao focar */
+    box-shadow: 0 0 5px rgba(0, 43, 92, 0.3); /* Sombra sutil ao focar */
+}
+
+/* Estilo dos botões de ação no chamado */
+.chamado-actions button {
+    padding: 8px 15px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Estilo do botão de atualizar no chamado */
+.chamado-actions .update-button {
+    background-color: var(--primary-color); /* Usa a cor primária */
+    color: #ffffff; /* Cor do texto branca */
+}
+
+/* Efeito hover no botão de atualizar */
+.chamado-actions .update-button:hover {
+    background-color: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilo do botão de WhatsApp no chamado */
+.chamado-actions .whatsapp-button {
+    background-color: var(--whatsapp-color); /* Verde do WhatsApp */
+    color: #ffffff; /* Cor do texto branca */
+}
+
+/* Efeito hover no botão de WhatsApp */
+.chamado-actions .whatsapp-button:hover {
+    background-color: var(--whatsapp-dark); /* Verde escuro ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+.footer {
+    margin-top: 40px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #666; /* Cor cinza */
+    padding: 20px; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+}
+
+/* Estilo para o texto em negrito no rodapé */
+.footer strong {
+    color: #666; /* Cor cinza para consistência */
+}
+
+/* Estilo para quando não há chamados */
+.no-chamados {
+    font-size: 14px; /* Tamanho da fonte */
+    color: #666; /* Cor cinza */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Responsividade para telas menores (768px ou menos) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Organiza os itens em coluna */
+        gap: 15px; /* Espaçamento entre os itens */
+        padding: 20px; /* Espaçamento interno ajustado */
+    }
+    .admin-title {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+    .admin-info {
+        flex-direction: column; /* Organiza em coluna */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+    .filters {
+        flex-direction: column; /* Organiza os filtros em coluna */
+        gap: 15px; /* Espaçamento ajustado */
+    }
+    .filter-group select {
+        width: 100%; /* Largura total */
+    }
+    .admin-actions {
+        padding: 0 20px; /* Adiciona padding lateral para alinhamento */
+    }
+}
+
+/* Responsividade para telas pequenas (480px ou menos) */
+@media (max-width: 480px) {
+    .admin-container {
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+    .section-title {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+    .chamado-actions {
+        flex-direction: column; /* Organiza as ações em coluna */
+        gap: 8px; /* Espaçamento ajustado */
+    }
+    .chamado-actions input[type="text"],
+    .chamado-actions select {
+        width: 100%; /* Largura total */
+    }
+    .register-button {
+        padding: 10px; /* Reduz o espaçamento interno */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+    .admin-actions {
+        padding: 0 10px; /* Ajusta o padding para telas menores */
+    }
+}

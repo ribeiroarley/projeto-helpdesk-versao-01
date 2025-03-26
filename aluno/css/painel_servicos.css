@@ -1,0 +1,197 @@
+/* Define variáveis globais para cores consistentes */
+:root {
+    --primary-color: #ff6200; /* Cor principal (laranja) */
+    --primary-dark: #e65a00; /* Tom mais escuro para hover */
+    --secondary-color: #0078d4; /* Cor secundária (azul) */
+}
+
+/* Reset básico para consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
+    background: #f9fbfc; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+    min-height: 100vh; /* Garante altura mínima da tela */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    background: var(--primary-color); /* Usa a cor primária */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+/* Conteúdo do cabeçalho */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Título do cabeçalho */
+.header h1 {
+    font-size: 1.8rem;
+    color: #ffffff; /* Texto branco para contraste */
+}
+
+/* Botão de logout */
+.logout-button {
+    background: #ffffff;
+    color: var(--primary-color); /* Usa a cor primária */
+    border: 2px solid var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-button:hover {
+    background: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+    color: #ffffff;
+}
+
+.logout-button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Seção principal */
+.main-content {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Seção de serviços */
+.services {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Título da seção */
+.services h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color); /* Usa a cor primária */
+    margin-bottom: 20px;
+}
+
+/* Mensagem de boas-vindas */
+.welcome-message {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Lista de serviços */
+.services-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens da lista */
+}
+
+/* Itens da lista */
+.services-list li {
+    margin: 10px 0;
+    width: 100%; /* Garante que todos os itens tenham a mesma largura */
+    max-width: 400px; /* Define uma largura máxima para os botões */
+}
+
+/* Botões de serviço (aplica tanto a <a> quanto a <button>) */
+.service-button {
+    display: block; /* Ocupa toda a largura do item da lista */
+    background: var(--primary-color); /* Usa a cor primária */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none; /* Remove sublinhado para links */
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    width: 100%; /* Garante largura uniforme */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo específico para <button> com a classe .service-button */
+.service-button[type="button"],
+.service-button:not([href]) {
+    border: none; /* Remove borda padrão do botão */
+    cursor: pointer; /* Adiciona cursor de clique */
+}
+
+/* Hover para .service-button (aplica a ambos <a> e <button>) */
+.service-button:hover {
+    background: var(--primary-dark); /* Tom mais escuro ao passar o mouse */
+}
+
+/* Foco para .service-button */
+.service-button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Rodapé */
+.footer {
+    background: #f0f4f8;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilo para o texto em negrito no rodapé */
+.footer strong {
+    color: #666;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header h1 {
+        margin: 10px 0;
+        font-size: 1.6rem;
+    }
+    .services {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    .services h2 {
+        font-size: 1.4rem;
+    }
+    .service-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
