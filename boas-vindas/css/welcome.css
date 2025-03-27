@@ -33,7 +33,6 @@ body {
     text-align: center; /* Centraliza o texto */
     margin: 40px 0 20px; /* Espaçamento externo (topo, laterais, base) */
     font-weight: bold; /* Define o texto como negrito */
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
 }
 
 /* Container principal da página */
