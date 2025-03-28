@@ -12,15 +12,18 @@
     <!-- Importa a fonte Roboto do Google Fonts para consistência tipográfica -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Aviso exibido se o JavaScript estiver desativado no navegador -->
     <noscript>
         <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
     </noscript>
+
     <!-- Seção principal da página -->
     <main class="register-page">
         <!-- Título principal do sistema -->
         <h1 class="site-title">Comunidade Senac</h1>
+
         <!-- Container central com o formulário de cadastro -->
         <div class="register-container">
             <!-- Cabeçalho do container -->
@@ -28,6 +31,7 @@
                 <!-- Logo do Senac exibida no topo -->
                 <img src="../../assets/img/logoportal.png" alt="Logo do Portal Senac para o sistema Help Desk" width="200">
             </header>
+
             <!-- Formulário de cadastro -->
             <form id="cadastroAlunoForm" class="register-form" method="POST">
                 <!-- Campo de nome -->
@@ -35,24 +39,29 @@
                     <label for="nome">Nome Completo</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required aria-label="Digite seu nome completo">
                 </div>
+
                 <!-- Campo de e-mail -->
                 <div class="input-group">
                     <label for="email">E-mail Senac</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail Senac" required aria-label="Digite seu e-mail Senac">
                 </div>
+
                 <!-- Campo de WhatsApp -->
                 <div class="input-group">
                     <label for="whatsapp">WhatsApp</label>
                     <input type="text" id="whatsapp" name="whatsapp" placeholder="Digite seu número de WhatsApp" required aria-label="Digite seu número de WhatsApp">
                 </div>
+
                 <!-- Campo de senha -->
                 <div class="input-group">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required aria-label="Crie uma senha">
                 </div>
+
                 <!-- Botão de envio -->
                 <button type="submit" class="register-button" aria-label="Cadastrar">Cadastrar</button>
             </form>
+
             <!-- Mensagem de feedback -->
             <div id="cadastro-message" class="message"></div>
             <!-- Links de ajuda -->
@@ -61,6 +70,7 @@
             </div>
         </div>
     </main>
+
     <!-- Rodapé da página -->
     <footer class="footer">
         <!-- Descrição do sistema e informações da turma -->
@@ -68,7 +78,9 @@
         <!-- Nomes dos desenvolvedores -->
         <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
     </footer>
+
     <!-- Importa o arquivo JavaScript que controla a lógica da página -->
     <script src="../js/cadastro_aluno.js"></script>
+
 </body>
 </html>

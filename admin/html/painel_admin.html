@@ -12,11 +12,13 @@
     <!-- Importa a fonte Roboto do Google Fonts para consistência tipográfica -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Aviso exibido se o JavaScript estiver desativado no navegador -->
     <noscript>
         <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
     </noscript>
+
     <!-- Cabeçalho da página -->
     <header class="header">
         <!-- Logo do Senac exibida no topo -->
@@ -31,12 +33,14 @@
             <button class="logout-button" onclick="logout()">Sair</button>
         </div>
     </header>
+
     <!-- Conteúdo principal da página -->
     <main class="main-content">
         <!-- Botão para redirecionar para a página de cadastro de novo administrador -->
         <div class="admin-actions">
             <a href="cadastro_admin.html" class="register-button">Cadastrar novo administrador</a>
         </div>
+
         <!-- Container principal do painel administrativo -->
         <div class="admin-container">
             <!-- Título da seção de gerenciamento de chamados -->
@@ -53,6 +57,7 @@
                         <option value="Concluído">Concluído</option>
                     </select>
                 </div>
+
                 <!-- Filtro por tipo de serviço -->
                 <div class="filter-group">
                     <label for="filter-service">Filtrar por Serviço:</label>
@@ -64,6 +69,7 @@
                         <option value="Serviços de Programação">Serviços de Programação</option>
                     </select>
                 </div>
+
                 <!-- Filtro por ordem de data -->
                 <div class="filter-group">
                     <label for="sort-date">Ordenar por Data:</label>
@@ -73,12 +79,14 @@
                     </select>
                 </div>
             </div>
+
             <!-- Lista onde os chamados serão exibidos dinamicamente -->
             <div id="lista-chamados" class="chamados-list">
                 <!-- Chamados serão inseridos aqui pelo JavaScript -->
             </div>
         </div>
     </main>
+
     <!-- Rodapé da página -->
     <footer class="footer">
         <!-- Descrição do sistema e informações da turma -->
@@ -86,7 +94,9 @@
         <!-- Nomes dos desenvolvedores -->
         <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
     </footer>
+
     <!-- Importa o arquivo JavaScript que controla a lógica da página -->
     <script src="../js/painel_admin.js"></script>
+    
 </body>
 </html>

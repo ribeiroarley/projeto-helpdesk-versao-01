@@ -12,13 +12,16 @@
     <!-- Importa a fonte Roboto do Google Fonts para consistência tipográfica -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Aviso exibido se o JavaScript estiver desativado no navegador -->
     <noscript>
         <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
     </noscript>
+
     <!-- Seção principal da página -->
     <main class="login-page">
+
         <!-- Título principal do sistema -->
         <h1 class="site-title">Comunidade Senac</h1>
         <!-- Container central com o formulário de login -->
@@ -28,6 +31,7 @@
                 <!-- Logo do Senac exibida no topo -->
                 <img src="../../assets/img/logoportal.png" alt="Logo do Portal Senac para o sistema Help Desk" width="200">
             </header>
+
             <!-- Formulário de login -->
             <form id="loginAlunoForm" class="login-form" method="POST">
                 <!-- Campo de e-mail -->
@@ -43,6 +47,7 @@
                 <!-- Botão de envio -->
                 <button type="submit" class="login-button" aria-label="Entrar">Entrar</button>
             </form>
+            
             <!-- Links de ajuda -->
             <div class="help-links">
                 <a href="recuperar_senha_aluno.html" class="forgot-password">Esqueceu sua senha? Obtenha ajuda</a>
@@ -50,6 +55,7 @@
             </div>
         </div>
     </main>
+
     <!-- Rodapé da página -->
     <footer class="footer">
         <!-- Descrição do sistema e informações da turma -->
@@ -57,7 +63,9 @@
         <!-- Nomes dos desenvolvedores -->
         <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
     </footer>
+
     <!-- Importa o arquivo JavaScript que controla a lógica da página -->
     <script src="../js/tela_login_aluno.js"></script>
+
 </body>
 </html>

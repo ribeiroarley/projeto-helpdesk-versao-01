@@ -12,15 +12,18 @@
     <!-- Importa a fonte Roboto do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Mensagem para usuários com JavaScript desativado -->
     <noscript>
         <p style="color: red; text-align: center;">Este site requer JavaScript para funcionar corretamente. Por favor, habilite-o no seu navegador.</p>
     </noscript>
+
     <!-- Seção principal da página -->
     <main class="login-page">
         <!-- Título principal do site -->
         <h1 class="site-title">Comunidade Senac</h1>
+
         <!-- Container do formulário de login -->
         <div class="login-container">
             <!-- Cabeçalho do container -->
@@ -28,6 +31,7 @@
                 <!-- Logo do Senac -->
                 <img src="../../assets/img/logoportal.png" alt="Logo do Portal Senac para o sistema Help Desk" width="200">
             </header>
+
             <!-- Formulário de login -->
             <form id="loginAdminForm" class="login-form" method="POST">
                 <!-- Campo para o e-mail -->
@@ -35,14 +39,17 @@
                     <label for="email">E-mail do administrador</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required autocomplete="email" aria-label="Digite seu e-mail">
                 </div>
+
                 <!-- Campo para a senha -->
                 <div class="input-group">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required autocomplete="current-password" aria-label="Digite sua senha">
                 </div>
+
                 <!-- Botão para enviar o formulário -->
                 <button type="submit" class="login-button" aria-label="Entrar">Entrar</button>
             </form>
+
             <!-- Links de ajuda -->
             <div class="help-links">
                 <!-- Link para recuperação de senha -->
@@ -52,6 +59,7 @@
             </div>
         </div>
     </main>
+
     <!-- Rodapé da página -->
     <footer class="footer">
         <!-- Descrição do sistema e informações da turma -->
@@ -59,7 +67,9 @@
         <!-- Nomes dos desenvolvedores -->
         <p>Alunos: Antonio Roni, Arley Ribeiro, Lucas Praça e Francisco Edimar.</p>
     </footer>
+
     <!-- Importa o arquivo JavaScript -->
     <script src="../js/tela_login_admin.js"></script>
+    
 </body>
 </html>
